@@ -1,0 +1,73 @@
+01 Introduction to C# and Data Types
+Understanding Data Types
+Test your knowledge
+1. What type would you choose for the following “numbers”?
+A person’s telephone number：string
+A person’s height: float
+A person’s age: byte
+A person’s gender (Male, Female, Prefer Not To Answer): enum
+A person’s salary: float
+A book’s ISBN: string
+A book’s price: float
+A book’s shipping weight: float
+A country’s population: int
+The number of stars in the universe: long/ulong
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business): ushort
+2. What are the difference between value type and reference type variables? What is
+boxing and unboxing?
+1)
+1. value type will directly hold the value, while reference type will hold the memory address or reference for this value
+2. value types are stored in stack memory, while reference type will be stored in heap memory
+3. value type will not be collected by garbage collector, while reference type will be collected by garbage collector
+4. value type can be created by Struct or Enum, while reference type can be created by class, interface, delegate or array
+5. value type cannot accept null values, while reference type can accept null values
+2)
+convert a value type to reference type -- boxing
+convert a reference type to a value type -- unboxing
+3. What is meant by the terms managed resource and unmanaged resource in .NET
+Managed resources basically mean anything managed by the CLR (example: any of your managed objects). Unmanaged resources typically mean native resources that are created and lifetime managed outside the CLR (example GDI handles or say sockets
+4. Whats the purpose of Garbage Collector in .NET?
+.NET's garbage collector manages the allocation and release of memory for your application. Each time you create a new object, the common language runtime allocates memory for the object from the managed heap. As long as address space is available in the managed heap, the runtime continues to allocate space for new objects. However, memory is not infinite. Eventually the garbage collector must perform a collection in order to free some memory. The garbage collector's optimizing engine determines the best time to perform a collection, based upon the allocations being made. When the garbage collector performs a collection, it checks for objects in the managed heap that are no longer being used by the application and performs the necessary operations to reclaim their memory.
+Test your Knowledge
+1. What happens when you divide an int variable by 0? 
+Throw a DevideByZero exception. 
+2. What happens when you divide a double variable by 0?
+Throw a DevideByZero exception
+3. What happens when you overflow an int variable, that is, set it to a value beyond its
+range?
+We will get compilation error
+4. What is the difference between x = y++; and x = ++y;?
+i++ is known as Post Increment whereas ++i is called Pre Increment.
+1) Post-Increment (i++): we use i++ in our statement if we want to use the current value, and then we want to increment the value of i by 1.
+2) Pre-Increment(++i): We use ++i in our statement if we want to increment the value of i by 1 and then use it in our statement.
+
+5. What is the difference between break, continue, and return when used inside a loop
+statement?
+1)The break statement will completely break out of the current loop, meaning it won’t run any more of the statements contained inside of it.
+2)continue works a little differently. Instead, it goes back to the start of the loop, skipping over any other statements contained within the loop.
+3)return stops execution and exits the function. return always exits its function immediately, with no further execution if it's inside a for loop.
+6. What are the three parts of a for statement and which of them are required?
+1)
+Initialization expression, which describes the starting point of the loop, where the loop variable is initialized with a starting value. 
+The testing expression, which is the condition until when the loop is repeated. 
+The update statement/ (the increasing /decreasing expression), which is usually the number by which the loop variable is increased /decreased.
+2)
+All of them are not required because it is possible to run a for loop without these expressions indefinitely.
+7. What is the difference between the = and == operators?
+=	==
+It is an assignment operator.	It is a relational or comparison operator.
+It is used for assigning the value to a variable.	It is used for comparing two values. It returns 1 if both the values are equal otherwise returns 0.
+Constant term cannot be placed on left hand side.
+Example: 1=x; is invalid.	Constant term can be placed in the left hand side.
+Example: 1==1 is valid and returns 1.
+
+8. Does the following statement compile? for ( ; true; ) ;
+Yes.
+9. What does the underscore _ represent in a switch expression?
+The underscore (_) character replaces the default keyword to signify that it should match anything if reached. 
+https://codebuns.com/csharp-advanced/csharp-8-switch-expressions/
+10. What interface must an object implement to be enumerated over by using the foreach
+statement?
+The IEnumerable interface permits enumeration by using a foreach loop. 
+https://docs.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/general/make-class-foreach-statement

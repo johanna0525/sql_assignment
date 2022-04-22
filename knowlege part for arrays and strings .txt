@@ -1,0 +1,31 @@
+02 Arrays and Strings
+Test your Knowledge
+1. When to use String vs. StringBuilder in C# ?
+If a string is going to remain constant throughout the program, then use String class object because a String object is immutable. If a string can change (example: lots of logic and operations in the construction of the string) then using a StringBuilder is the best option.
+2. What is the base class for all arrays in C#?
+The Array class is the base class for all the arrays in C#. It is defined in the System namespace. The Array class provides various properties and methods to work with arrays.
+3. How do you sort an array in C#?
+The simplest way to sort an array in C
+# is using Array.Sort method. The Array.Sort method takes a one-dimensional array as an input and sorts the array elements in the ascending order.
+The following code snippet creates an array of integers.
+int[] intArray = new int[] { 9, 2, 4, 3, 1, 5 };
+C#
+Copy
+The Array.Sort method takes array as an input and sorts the array in ascending order.
+Array.Sort(intArray);
+C#
+Copy
+To sort an array in descending order, we can use Sort.Reverse method. This method also takes an array as an input and sorts its elements in descending order. The following code snippet reverses an array.
+Array.Reverse(intArray);
+
+4. What property of an array object can be used to get the total number of elements in
+an array?
+Length property.
+
+5. Can you store multiple data types in System.Array?
+No, we cannot store multiple datatype in an Array, we can store single datatype only in an Array.
+http://net-informations.com/faq/netfaq/multipledata.htm
+6. What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?
+Practice Arrays
+Array.Clone() method makes a clone of the original array. It returns an exact length array. Array.Clone() method does not require the destination array to be existed as it creates a new one from scratch Array.CopyTo() copies the elements from the original array to the destination array starting at the specified destination array index. Note that, this adds elements to an already existing array. Array.CopyTo() require a destination array to be existed before and it must be capable to hold all the elements in the source array from the index that is specified to copy from the source array.
+
